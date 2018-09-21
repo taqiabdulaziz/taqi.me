@@ -97,12 +97,12 @@ header .navsocmed {
 .divSecond {
     flex: 1;
     display: inline-block;
-    flex-direction: row;
     height: 1100px;
     width: 100%;
     background-color: white;
-    padding: 0 440px;
-    justify-content: space-between;
+    padding: 20px 440px;
+    justify-items: center;
+    
 }
 
 h4 {
@@ -112,22 +112,26 @@ h4 {
     margin: 30px;
 }
 
+ul {
+    padding: 0;
+}
+
 h2 {
     position: relative;
     color: yellow;
     display: inline-block;
     font-family: sans-serif;
+    width: 100%;
     text-transform: uppercase;
-}
-
-.non-skill {
-    list-style: none;
+    text-align: center;
 }
 
 li {
+    list-style: none;
     font-family: sans-serif;
     text-transform: uppercase;
     margin: 10px;
+    text-align: center;
 }
 
 
