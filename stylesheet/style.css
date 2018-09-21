@@ -16,18 +16,10 @@ body {
 
 
 /* HEADER SECTION */
-header div {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    flex: 2;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    color: aliceblue;
-}
 
 h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: aqua;   
+    color: yellow; 
     font-size: 15pt;
     flex: 1;
     padding-left: 20px;
@@ -37,12 +29,21 @@ header {
     background-color: black;
     display: flex;
     flex-direction: row;
-    height: 150px;
+    height: 170px;
     padding: 0px 90px;
 }
 
-header nav {
+header div {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: aliceblue;
+}
+
+header nav {
+    flex: 2;
     height: 100%;
     display: flex;
     width: 100%;
@@ -74,13 +75,33 @@ header .navsocmed {
     padding: 0 0px;
 }
 
+.divWrapper {
+    display: inline-block;
+    flex-direction: column;
+    max-height: 9000px;
+    width: 100%;
+    overflow: auto;
+}
+
 .divMain {
+    flex: 1;
     display: flex;
     flex-direction: row;
-    height: 100%;
+    height: 700px;
     width: 100%;
     background-color: black;
     padding: 0 180px;
+    justify-content: space-between;
+}
+
+.divSecond {
+    flex: 1;
+    display: inline-block;
+    flex-direction: row;
+    height: 1100px;
+    width: 100%;
+    background-color: white;
+    padding: 0 440px;
     justify-content: space-between;
 }
 
@@ -91,11 +112,31 @@ h4 {
     margin: 30px;
 }
 
+h2 {
+    position: relative;
+    color: yellow;
+    display: inline-block;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.non-skill {
+    list-style: none;
+}
+
+li {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+
 /* TWO-MAIN CONTENT ON FIRST DIV */
 
 /* HD SCREEN - 1366, 720p */
-@media only screen and (max-width: 1366px) {
+@media only screen and (min-width: 1366px) {
     .div1 {
+        text-align: center;
         justify-content: center;
         display: flex;
         flex-direction: column;
@@ -105,19 +146,25 @@ h4 {
     #imagewrapper {
         flex: 1;
         display: flex;
+        width: auto;
+        height: auto;
         flex-direction: column;
         justify-content: center;
     }
     
+    h4 {
+        font-size: 30pt;
+    }
+
     #gambarsaya {
         display: flex;
         object-fit: contain;
-        border-radius: 50%; 
+        
     }   
 }
 
 /* FHD TO 4K - 1920 up */
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1920px) {
     .div1 {
         justify-content: center;
         display: flex;
@@ -135,7 +182,7 @@ h4 {
     #gambarsaya {
         display: flex;
         object-fit: contain;
-        border-radius: 50%; 
+        
     }   
 }
 
