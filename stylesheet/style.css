@@ -1,3 +1,4 @@
+
 html,body {
     margin: 0;
     padding: 0;
@@ -13,6 +14,8 @@ body {
     flex-direction: column;
 }
 
+
+/* HEADER SECTION */
 header div {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     flex: 2;
@@ -74,10 +77,11 @@ header .navsocmed {
 .divMain {
     display: flex;
     flex-direction: row;
-    height: 600px;
+    height: 100%;
     width: 100%;
     background-color: black;
     padding: 0 180px;
+    justify-content: space-between;
 }
 
 h4 {
@@ -87,15 +91,52 @@ h4 {
     margin: 30px;
 }
 
-.div1 {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+/* TWO-MAIN CONTENT ON FIRST DIV */
+
+/* HD SCREEN - 1366, 720p */
+@media only screen and (max-width: 1366px) {
+    .div1 {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    #imagewrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #gambarsaya {
+        display: flex;
+        object-fit: contain;
+        border-radius: 50%; 
+    }   
 }
 
-#gambarsaya {
-    flex: 1;
-    display: flex;
+/* FHD TO 4K - 1920 up */
+@media only screen and (max-width: 1920px) {
+    .div1 {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
     
+    #imagewrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    #gambarsaya {
+        display: flex;
+        object-fit: contain;
+        border-radius: 50%; 
+    }   
 }
+
+
