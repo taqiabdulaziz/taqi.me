@@ -274,6 +274,10 @@ footer {
         display: flex;
         object-fit: contain;
     }   
+
+    .divMain {
+        height: 1000px;
+    }
 }
 
 
