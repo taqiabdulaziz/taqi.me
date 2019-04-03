@@ -1,0 +1,11 @@
+body {
+  font-family: 'Roboto', sans-serif
+}
+.heading {
+  font-weight: 700;
+  font-size: 40px;
+}
+.subheading {
+  font-weight: 100;
+  font-size: 32px;
+}
