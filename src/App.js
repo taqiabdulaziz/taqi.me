@@ -75,7 +75,7 @@ class App extends Component {
               this.state.article.map((item, i) => {
                 return (
                   <Grid style={{width: "20%", marginBottom: "1%"}} item xs={6}>
-                    <Typography variant="h5" component="h5" gutterBottom><a href="http://" style={style.a}>{item.title}</a></Typography>
+                    <Typography variant="h5" component="h5" gutterBottom><a href="http://google.com" style={style.a}>{item.title}</a></Typography>
                     <Typography variant="subtitle1" component="subtitle1" style={{maxWidth: "90%"}}>{item.desc}</Typography>
                   </Grid>
                 )
