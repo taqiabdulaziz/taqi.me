@@ -29,18 +29,22 @@ class App extends Component {
       {
         title: "Djoernal",
         desc: "Djoernal is an accounting mobile app which can be used by individuals as a personal revenue & expense tracker or used by micro-to-medium scale business for booking keeping with proper accounting procedures.",
+        link: "https://github.com/djoernal"
       },
       {
         title: "PEKMA VII Official Android App",
-        desc: "Pekan Mahasiswa VII or PEKMA VII is the biggest sport, academic, and art competition in PKN STAN which is organized by PKN STAN, cooperating with some enthusiastic, creative, and innovative students."
+        desc: "Pekan Mahasiswa VII or PEKMA VII is the biggest sport, academic, and art competition in PKN STAN which is organized by PKN STAN, cooperating with some enthusiastic, creative, and innovative students.",
+        link: "https://play.google.com/store/apps/details?id=id.pekma.pekmavii"
       },
       {
         title: "Money Rain",
-        desc: "Simple arcade game built using Firebase & VueJS"
+        desc: "Simple arcade game built using Firebase & VueJS",
+        link: "https://tangkapduit.firebaseapp.com/"
       },
       {
         title: "Kanban",
-        desc: "Mini Kanban built using Firebase & VueJS"
+        desc: "Mini Kanban built using Firebase & VueJS",
+        link: "https://kanban-24700.firebaseapp.com/#/"
       }
     ]
   }
@@ -58,7 +62,7 @@ class App extends Component {
           style={style.child}
         >
           <Typography variant="h4" component="h4" gutterBottom>Hi.</Typography>
-          <Typography variant="h5" component="h5" gutterBottom>I'm Muhammad Taqi. a Full Stack Developer, coffee consumer, reader, currently working at Full Stack Developer at <a href="http://" style={style.a}>Axiata Digital Services Indonesia</a>, living in South Tangerang - Indonesia</Typography>
+          <Typography variant="h5" component="h5" gutterBottom>I'm Muhammad Taqi. a Full Stack Developer, coffee consumer, reader, currently working at Full Stack Developer at <a href="https://www.linkedin.com/company/adsi/" style={style.a}>Axiata Digital Services Indonesia</a>, living in South Tangerang - Indonesia</Typography>
         </Grid>
 
         <Grid
@@ -75,7 +79,7 @@ class App extends Component {
               this.state.article.map((item, i) => {
                 return (
                   <Grid style={{width: "20%", marginBottom: "1%"}} item xs={6}>
-                    <Typography variant="h5" component="h5" gutterBottom><a href="http://google.com" style={style.a}>{item.title}</a></Typography>
+                    <Typography variant="h5" component="h5" gutterBottom><a href={item.link ? item.link : "http://google.com"} style={style.a}>{item.title}</a></Typography>
                     <Typography variant="subtitle1" component="subtitle1" style={{maxWidth: "90%"}}>{item.desc}</Typography>
                   </Grid>
                 )
