@@ -9,6 +9,10 @@ import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMe
 import test from './components/test'
 
 const style = {
+  body: {
+    background: "lightyellow",
+    height: "100vh"
+  },
   container: {
     margin: "4%"
   },
@@ -23,7 +27,6 @@ const style = {
 }
 
 class App extends Component {
-
   state = {
     article: [
       {
@@ -52,62 +55,65 @@ class App extends Component {
   render() {
     return (
       <Grid
-        className="body"
-        container
-        alignContent="center"
-        justify="center"
-        style={style.container}
+        style={style.body}
       >
         <Grid
-          style={style.child}
+          className="body"
+          container
+          alignContent="center"
+          justify="center"
         >
-          <Typography variant="h4" component="h4" gutterBottom>Hi.</Typography>
-          <Typography variant="h5" component="h5" gutterBottom>I'm Muhammad Taqi. a Full Stack Developer, coffee consumer, reader, currently working at Full Stack Developer at <a href="https://www.linkedin.com/company/adsi/" style={style.a}>Axiata Digital Services Indonesia</a>, living in South Tangerang - Indonesia</Typography>
-        </Grid>
-
-        <Grid
-          style={style.child}
-        >
-          <Typography variant="h4" component="h4" gutterBottom>Projects</Typography>
           <Grid
-            justify="flex-start"
-            alignItems="flex-start"
-            container
-            spacing={10}
+            style={style.child}
           >
-            {
-              this.state.article.map((item, i) => {
-                return (
-                  <Grid style={{width: "20%", marginBottom: "1%"}} item xs={6}>
-                    <Typography variant="h5" component="h5" gutterBottom><a href={item.link ? item.link : "http://google.com"} style={style.a}>{item.title}</a></Typography>
-                    <Typography variant="subtitle1" component="subtitle1" style={{maxWidth: "90%"}}>{item.desc}</Typography>
-                  </Grid>
-                )
-              })
-            }
+            <Typography variant="h4" component="h4" gutterBottom>Hi.</Typography>
+            <Typography variant="h5" component="h5" gutterBottom>I'm Muhammad Taqi. a Full Stack Developer, coffee consumer, reader, currently working at Full Stack Developer at <a href="https://www.linkedin.com/company/adsi/" style={style.a}>Axiata Digital Services Indonesia</a>, living in South Tangerang - Indonesia</Typography>
           </Grid>
-        </Grid>
-        <Grid
-          style={style.child}
-        >
-          <Typography variant="h4" component="h4" gutterBottom>Contact</Typography>
-          <Typography variant="h6">Drop me a line at <a style={style.a} href="mailto:muhammad.taqi@myboost.id">muhammad.taqi@myboost.id</a></Typography>
-        </Grid>
-        <Grid
-          style={style.child}
-        >
-          <a href="https://www.linkedin.com/in/muhammad-taqi-a-92002589/">
-            <img style={{margin: "10px"}} src={require('../src/asset/icons/linkedin-logo-1.svg')} width="4%"></img>
-          </a>
-          <a href="https://github.com/taqiabdulaziz">
-            <img style={{margin: "10px"}} src={require('../src/asset/icons/github-logo.svg')} width="4%"></img>
-          </a>
-          <a href="https://www.instagram.com/taqi.mp3/?hl=en">
-            <img style={{margin: "10px"}} src={require('../src/asset/icons/instagram.png')} width="4%"></img>
-          </a>
-          <a href="https://www.facebook.com/ANNEXIV">
-            <img style={{margin: "10px"}} src={require('../src/asset/icons/facebook-logo.svg')} width="4%"></img>
-          </a>
+
+          <Grid
+            style={style.child}
+          >
+            <Typography variant="h4" component="h4" gutterBottom>Projects</Typography>
+            <Grid
+              justify="flex-start"
+              alignItems="flex-start"
+              container
+              spacing={10}
+            >
+              {
+                this.state.article.map((item, i) => {
+                  return (
+                    <Grid style={{width: "20%", marginBottom: "1%"}} item xs={6}>
+                      <Typography variant="h5" component="h5" gutterBottom><a href={item.link ? item.link : "http://google.com"} style={style.a}>{item.title}</a></Typography>
+                      <Typography variant="subtitle1" component="subtitle1" style={{maxWidth: "90%"}}>{item.desc}</Typography>
+                    </Grid>
+                  )
+                })
+              }
+            </Grid>
+          </Grid>
+          <Grid
+            style={style.child}
+          >
+            <Typography variant="h4" component="h4" gutterBottom>Contact</Typography>
+            <Typography variant="h6">Drop me a line at <a style={style.a} href="mailto:muhammad.taqi@myboost.id">muhammad.taqi@myboost.id</a></Typography>
+          </Grid>
+          <Grid
+            style={style.child}
+          >
+            <a href="https://www.linkedin.com/in/muhammad-taqi-a-92002589/">
+              <img style={{margin: "10px"}} src={require('../src/asset/icons/linkedin-logo-1.svg')} width="4%"></img>
+            </a>
+            <a href="https://github.com/taqiabdulaziz">
+              <img style={{margin: "10px"}} src={require('../src/asset/icons/github-logo.svg')} width="4%"></img>
+            </a>
+            <a href="https://www.instagram.com/taqi.mp3/?hl=en">
+              <img style={{margin: "10px"}} src={require('../src/asset/icons/instagram.png')} width="4%"></img>
+            </a>
+            <a href="https://www.facebook.com/ANNEXIV">
+              <img style={{margin: "10px"}} src={require('../src/asset/icons/facebook-logo.svg')} width="4%"></img>
+            </a>
+          </Grid>
         </Grid>
       </Grid>
     );
