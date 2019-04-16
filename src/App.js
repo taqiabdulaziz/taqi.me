@@ -4,17 +4,17 @@ import './App.css';
 import { Grid, Typography } from "@material-ui/core";
 import { styles } from 'ansi-colors';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
+import { uiConfig, firebase, db } from './db/db'
 
 // Components
 import test from './components/test'
 
 const style = {
   body: {
-    background: "lightyellow",
-    height: "100vh"
+    height: "100vh",
   },
   container: {
-    margin: "4%"
+    maxWidth: "70%"
   },
   child: {
     maxWidth: "70%",
@@ -49,16 +49,19 @@ class App extends Component {
         desc: "Mini Kanban built using Firebase & VueJS",
         link: "https://kanban-24700.firebaseapp.com/#/"
       }
-    ]
+    ],
   }
 
   render() {
     return (
       <Grid
+        container
+        justify="center"
+        alignContent="center"
         style={style.body}
       >
         <Grid
-          className="body"
+          style={style.container}
           container
           alignContent="center"
           justify="center"
@@ -117,6 +120,13 @@ class App extends Component {
         </Grid>
       </Grid>
     );
+  }
+
+  async componentWillMount() {
+    db.collection('messages').onSnapshot((querySnapshot) => {
+      console.log(querySnapshot);
+      
+    })
   }
 }
 
