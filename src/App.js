@@ -6,9 +6,6 @@ import { styles } from 'ansi-colors';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 import { uiConfig, firebase, db } from './db/db'
 
-// Components
-import test from './components/test'
-
 const style = {
   body: {
     height: "100vh",
