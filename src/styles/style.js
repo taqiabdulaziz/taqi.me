@@ -1,6 +1,7 @@
 const style = {
   body: {
     height: "100vh",
+    background: "whitesmoke"
   },
   container: {
     maxWidth: "70%"
@@ -16,6 +17,15 @@ const style = {
   centerPaper: {
     width: "60%",
     height: "60%",
+  },
+  socialMediaLogo: {
+    width: "3%",
+  },
+  profilePicture: {
+    height: "80%"
+  },
+  text: {
+    marginBottom: '2%'
   }
 }
 

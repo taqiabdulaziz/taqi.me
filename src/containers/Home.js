@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Grid, Typography, Paper } from '@material-ui/core';
 import { uiConfig, firebase, db } from '../db/db';
 import { firestore } from 'firebase';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import style from '../styles/style';
 
@@ -44,11 +43,30 @@ class Home extends Component {
             justify="space-between"
             style={{ height: '100%', width: '100%' }}
           >
-            <Grid item style={{ width: '100%', height: "80%", padding: "20px" }}>
-              <Grid style={{background: "brown", width: "100%", height: "100%"}}></Grid>
+            <Grid item style={{ width: '100%', height: "85%", padding: "50px" }}>
+              <Grid container style={{width: "100%", height: "100%"}}>
+                <Grid item xs={6} container justify="center" alignContent="center">
+                  <Grid style={{width: "100%", height: "100%"}}>
+                    <img src={"https://avatars0.githubusercontent.com/u/30410316?s=460&v=4"} style={style.profilePicture}/>
+                  </Grid>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="h3" style={style.text}>Hi</Typography>
+                  <Typography variant="h4" style={style.text}>I'm Muhammad Taqi</Typography>
+                  <Typography variant="h4" style={style.text}>Full Stack Developer</Typography>
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid item style={{ width: '100%', height: "20%" }}>
-              <Paper style={{height: "100%", background: "#09cb78"}}>a</Paper>
+            <Grid item style={{ width: '100%', height: "15%" }}>
+              <Paper style={{height: "100%", background: "#09cb78"}}>
+                <Grid container justify="space-evenly" alignContent="center" alignItems="center" style={{height: "100%", width: "100%"}}>
+                  <a href='https://google.com'>
+                    <img src={require('../asset/icons/instagram.png')} style={style.socialMediaLogo}></img>
+                  </a>
+                  <img src={require('../asset/icons/linkedin-logo-1.svg')} style={style.socialMediaLogo}></img>
+                  <img src={require('../asset/icons/github-logo.svg')} style={style.socialMediaLogo}></img>
+                </Grid>
+              </Paper>
             </Grid>
           </Grid>
         </Paper>
