@@ -32,7 +32,7 @@ class App extends Component {
         link: "https://github.com/djoernal"
       },
       {
-        title: "PEKMA VII Official Android App",
+        title: "PEKMA VII Officiall Android App",
         desc: "Pekan Mahasiswa VII or PEKMA VII is the biggest sport, academic, and art competition in PKN STAN which is organized by PKN STAN, cooperating with some enthusiastic, creative, and innovative students.",
         link: "https://play.google.com/store/apps/details?id=id.pekma.pekmavii"
       },
