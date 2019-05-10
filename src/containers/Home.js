@@ -60,7 +60,7 @@ class Home extends Component {
             <Grid item style={{ width: '100%', height: "15%" }}>
               <Paper style={{height: "100%", background: "#09cb78"}}>
                 <Grid container justify="space-evenly" alignContent="center" alignItems="center" style={{height: "100%", width: "100%"}}>
-                  <a href='https://google.com'>
+                  <a href='https://google.comw'>
                     <img src={require('../asset/icons/instagram.png')} style={style.socialMediaLogo}></img>
                   </a>
                   <img src={require('../asset/icons/linkedin-logo-1.svg')} style={style.socialMediaLogo}></img>
